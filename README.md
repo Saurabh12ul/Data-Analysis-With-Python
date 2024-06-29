@@ -1,4 +1,4 @@
-#Importing Important Library
+**#Importing Important Library**
 
 import numpy as np
 
@@ -15,7 +15,7 @@ from sklearn.preprocessing import LabelEncoder
 
 
 
-#Checking Data Info
+**#Checking Data Info**
 
 df.shape
 
@@ -30,13 +30,13 @@ df["Engine Type"].value_counts()
 
 
 
-#Plotting Graph
+**#Plotting Graph**
 
 sns.countplot(x="Engine Type",data=df)
 
 plt.show()
 
-#Calculate And Remove Empty Places
+**#Calculate And Remove Empty Places**
 
 miss_per=df.isnull().sum()/df.shape[0]
 
@@ -65,7 +65,7 @@ type(y)
 
 
 
-#Import Train test split
+**#Import Train test split**
 
 from sklearn.model_selection import train_test_split
 
@@ -73,7 +73,7 @@ from sklearn.linear_model import LinearRegression
 
 from sklearn import metrics
 
-#Train and testing data
+**#Train and testing data**
 
 x_train,x_test,y_train,y_test = train_test_split(x,y,test_size=0.30,random_state=25)
 
@@ -90,7 +90,7 @@ x_test_pred=model.predict(x_test)
 
 
 
-#Calculating Accuracy of data
+**#Calculating Accuracy of data**
 
 accu = metrics.r2_score(y_test,x_test_pred)
 
